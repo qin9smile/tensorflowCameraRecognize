@@ -12,12 +12,16 @@
 		9E404B6B208D7F4A0025423D /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 9E404B69208D7F4A0025423D /* Main.storyboard */; };
 		9E404B6D208D7F4C0025423D /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 9E404B6C208D7F4C0025423D /* Assets.xcassets */; };
 		9E404B70208D7F4C0025423D /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 9E404B6E208D7F4C0025423D /* LaunchScreen.storyboard */; };
-		9E5E228E208DCAB900B732E0 /* README.md in Resources */ = {isa = PBXBuildFile; fileRef = 9E5E228D208DCAB900B732E0 /* README.md */; };
 		9E5E2291208DCACE00B732E0 /* Accelerate.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 9E5E2290208DCACE00B732E0 /* Accelerate.framework */; };
-		9E5E2293208DCAEB00B732E0 /* libtensorflow-core.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 9E5E2292208DCAEB00B732E0 /* libtensorflow-core.a */; };
-		9E5E2296208DCB1000B732E0 /* libprotobuf-lite.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 9E5E2294208DCB1000B732E0 /* libprotobuf-lite.a */; };
-		9E5E2297208DCB1000B732E0 /* libprotobuf.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 9E5E2295208DCB1000B732E0 /* libprotobuf.a */; };
-		9E5E2299208DCB3D00B732E0 /* nsync.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 9E5E2298208DCB3D00B732E0 /* nsync.a */; };
+		9E5E22AE208EC82D00B732E0 /* nsync.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 9E5E2298208DCB3D00B732E0 /* nsync.a */; };
+		9E5E22AF208EC82D00B732E0 /* libprotobuf-lite.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 9E5E2294208DCB1000B732E0 /* libprotobuf-lite.a */; };
+		9E5E22B0208EC82D00B732E0 /* libprotobuf.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 9E5E2295208DCB1000B732E0 /* libprotobuf.a */; };
+		9E5E22B1208EC84900B732E0 /* libtensorflow-core.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 9E5E2292208DCAEB00B732E0 /* libtensorflow-core.a */; };
+		9E5E22C9208ECB5800B732E0 /* ImageRecognizer.mm in Sources */ = {isa = PBXBuildFile; fileRef = 9E5E22C8208ECB5700B732E0 /* ImageRecognizer.mm */; };
+		9E5E22CD208ECB5E00B732E0 /* tensorflow_utils.mm in Sources */ = {isa = PBXBuildFile; fileRef = 9E5E22CB208ECB5E00B732E0 /* tensorflow_utils.mm */; };
+		9E5E22D0208EDB2B00B732E0 /* imagenet_comp_graph_label_strings.txt in Resources */ = {isa = PBXBuildFile; fileRef = 9E5E22CE208EDB2B00B732E0 /* imagenet_comp_graph_label_strings.txt */; };
+		9E5E22D1208EDB2B00B732E0 /* tensorflow_inception_graph.pb in Resources */ = {isa = PBXBuildFile; fileRef = 9E5E22CF208EDB2B00B732E0 /* tensorflow_inception_graph.pb */; };
+		9E5E22D3208EDB9200B732E0 /* CameraView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9E5E22D2208EDB9200B732E0 /* CameraView.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -34,6 +38,14 @@
 		9E5E2294208DCB1000B732E0 /* libprotobuf-lite.a */ = {isa = PBXFileReference; lastKnownFileType = archive.ar; name = "libprotobuf-lite.a"; path = "tensorflow/tensorflow/contrib/makefile/gen/protobuf_ios/lib/libprotobuf-lite.a"; sourceTree = "<group>"; };
 		9E5E2295208DCB1000B732E0 /* libprotobuf.a */ = {isa = PBXFileReference; lastKnownFileType = archive.ar; name = libprotobuf.a; path = tensorflow/tensorflow/contrib/makefile/gen/protobuf_ios/lib/libprotobuf.a; sourceTree = "<group>"; };
 		9E5E2298208DCB3D00B732E0 /* nsync.a */ = {isa = PBXFileReference; lastKnownFileType = archive.ar; name = nsync.a; path = "tensorflow/tensorflow/contrib/makefile/downloads/nsync/builds/lipo.ios.c++11/nsync.a"; sourceTree = "<group>"; };
+		9E5E22B8208EC99B00B732E0 /* CameraRecognize-Bridging-Header.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "CameraRecognize-Bridging-Header.h"; sourceTree = "<group>"; };
+		9E5E22C7208ECB5700B732E0 /* ImageRecognizer.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ImageRecognizer.h; sourceTree = "<group>"; };
+		9E5E22C8208ECB5700B732E0 /* ImageRecognizer.mm */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.objcpp; path = ImageRecognizer.mm; sourceTree = "<group>"; };
+		9E5E22CB208ECB5E00B732E0 /* tensorflow_utils.mm */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.objcpp; path = tensorflow_utils.mm; sourceTree = "<group>"; };
+		9E5E22CC208ECB5E00B732E0 /* tensorflow_utils.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = tensorflow_utils.h; sourceTree = "<group>"; };
+		9E5E22CE208EDB2B00B732E0 /* imagenet_comp_graph_label_strings.txt */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; path = imagenet_comp_graph_label_strings.txt; sourceTree = "<group>"; };
+		9E5E22CF208EDB2B00B732E0 /* tensorflow_inception_graph.pb */ = {isa = PBXFileReference; lastKnownFileType = file; path = tensorflow_inception_graph.pb; sourceTree = "<group>"; };
+		9E5E22D2208EDB9200B732E0 /* CameraView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = CameraView.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -41,10 +53,10 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				9E5E2299208DCB3D00B732E0 /* nsync.a in Frameworks */,
-				9E5E2296208DCB1000B732E0 /* libprotobuf-lite.a in Frameworks */,
-				9E5E2297208DCB1000B732E0 /* libprotobuf.a in Frameworks */,
-				9E5E2293208DCAEB00B732E0 /* libtensorflow-core.a in Frameworks */,
+				9E5E22B1208EC84900B732E0 /* libtensorflow-core.a in Frameworks */,
+				9E5E22AE208EC82D00B732E0 /* nsync.a in Frameworks */,
+				9E5E22AF208EC82D00B732E0 /* libprotobuf-lite.a in Frameworks */,
+				9E5E22B0208EC82D00B732E0 /* libprotobuf.a in Frameworks */,
 				9E5E2291208DCACE00B732E0 /* Accelerate.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -73,12 +85,17 @@
 		9E404B64208D7F490025423D /* CameraRecognize */ = {
 			isa = PBXGroup;
 			children = (
+				9E5E22CA208ECB5E00B732E0 /* utils */,
+				9E5E22C6208ECB5700B732E0 /* recognizer */,
+				9E5E22C1208ECB4D00B732E0 /* data */,
 				9E404B65208D7F4A0025423D /* AppDelegate.swift */,
 				9E404B67208D7F4A0025423D /* ViewController.swift */,
+				9E5E22D2208EDB9200B732E0 /* CameraView.swift */,
 				9E404B69208D7F4A0025423D /* Main.storyboard */,
 				9E404B6C208D7F4C0025423D /* Assets.xcassets */,
 				9E404B6E208D7F4C0025423D /* LaunchScreen.storyboard */,
 				9E404B71208D7F4C0025423D /* Info.plist */,
+				9E5E22B8208EC99B00B732E0 /* CameraRecognize-Bridging-Header.h */,
 			);
 			path = CameraRecognize;
 			sourceTree = "<group>";
@@ -93,6 +110,33 @@
 				9E5E2290208DCACE00B732E0 /* Accelerate.framework */,
 			);
 			name = Frameworks;
+			sourceTree = "<group>";
+		};
+		9E5E22C1208ECB4D00B732E0 /* data */ = {
+			isa = PBXGroup;
+			children = (
+				9E5E22CE208EDB2B00B732E0 /* imagenet_comp_graph_label_strings.txt */,
+				9E5E22CF208EDB2B00B732E0 /* tensorflow_inception_graph.pb */,
+			);
+			path = data;
+			sourceTree = "<group>";
+		};
+		9E5E22C6208ECB5700B732E0 /* recognizer */ = {
+			isa = PBXGroup;
+			children = (
+				9E5E22C7208ECB5700B732E0 /* ImageRecognizer.h */,
+				9E5E22C8208ECB5700B732E0 /* ImageRecognizer.mm */,
+			);
+			path = recognizer;
+			sourceTree = "<group>";
+		};
+		9E5E22CA208ECB5E00B732E0 /* utils */ = {
+			isa = PBXGroup;
+			children = (
+				9E5E22CB208ECB5E00B732E0 /* tensorflow_utils.mm */,
+				9E5E22CC208ECB5E00B732E0 /* tensorflow_utils.h */,
+			);
+			path = utils;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -127,6 +171,7 @@
 				TargetAttributes = {
 					9E404B61208D7F490025423D = {
 						CreatedOnToolsVersion = 9.3;
+						LastSwiftMigration = 0930;
 					};
 				};
 			};
@@ -153,10 +198,11 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				9E5E22D0208EDB2B00B732E0 /* imagenet_comp_graph_label_strings.txt in Resources */,
 				9E404B70208D7F4C0025423D /* LaunchScreen.storyboard in Resources */,
 				9E404B6D208D7F4C0025423D /* Assets.xcassets in Resources */,
-				9E5E228E208DCAB900B732E0 /* README.md in Resources */,
 				9E404B6B208D7F4A0025423D /* Main.storyboard in Resources */,
+				9E5E22D1208EDB2B00B732E0 /* tensorflow_inception_graph.pb in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -167,7 +213,10 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				9E5E22C9208ECB5800B732E0 /* ImageRecognizer.mm in Sources */,
 				9E404B68208D7F4A0025423D /* ViewController.swift in Sources */,
+				9E5E22CD208ECB5E00B732E0 /* tensorflow_utils.mm in Sources */,
+				9E5E22D3208EDB9200B732E0 /* CameraView.swift in Sources */,
 				9E404B66208D7F4A0025423D /* AppDelegate.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -312,19 +361,20 @@
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				CLANG_ENABLE_MODULES = YES;
 				CLANG_WARN_DOCUMENTATION_COMMENTS = NO;
 				CODE_SIGN_STYLE = Automatic;
 				DEVELOPMENT_TEAM = 4NNZ238874;
 				ENABLE_BITCODE = NO;
 				GCC_WARN_ABOUT_DEPRECATED_FUNCTIONS = NO;
 				HEADER_SEARCH_PATHS = (
-					"$(PROJECT_DIR)/tensorflow/tensorflow/contrib/makefile/downloads/protobuf/src",
-					"$(PROJECT_DIR)/tensorflow/tensorflow/contrib/makefile/downloads/nsync/public",
-					"$(PROJECT_DIR)/tensorflow/tensorflow/contrib/makefile/downloads/eigen",
-					"$(PROJECT_DIR)/tensorflow/tensorflow/contrib/makefile/gen",
+					"$(PROJECT_DIR)/tensorflow/tensorflow/contrib/makefile/downloads/protobuf/src\n",
+					"$(PROJECT_DIR)/tensorflow/tensorflow/contrib/makefile/downloads/nsync/public\n",
+					"$(PROJECT_DIR)/tensorflow/tensorflow/contrib/makefile/gen\n",
 					"$(PROJECT_DIR)",
+					"$(PROJECT_DIR)/tensorflow/tensorflow/contrib/makefile/downloads/eigen\n",
 					"$(PROJECT_DIR)/tensorflow/tensorflow/contrib/makefile/downloads",
-					"$(PROJECT_DIR)/tensorflow\n",
+					"$(PROJECT_DIR)/tensorflow",
 					"$(PROJECT_DIR)/tensorflow/tensorflow/contrib/makefile/gen/proto/\n",
 				);
 				INFOPLIST_FILE = CameraRecognize/Info.plist;
@@ -335,12 +385,20 @@
 				);
 				LIBRARY_SEARCH_PATHS = (
 					"$(inherited)",
-					"$(PROJECT_DIR)/tensorflow/tensorflow/contrib/makefile/gen/lib",
-					"$(PROJECT_DIR)/tensorflow/tensorflow/contrib/makefile/gen/protobuf_ios/lib",
 					"$(PROJECT_DIR)/tensorflow/tensorflow/contrib/makefile/downloads/nsync/builds/lipo.ios.c++11",
+					"$(PROJECT_DIR)/tensorflow/tensorflow/contrib/makefile/gen/protobuf_ios/lib",
+					"$(PROJECT_DIR)/tensorflow/tensorflow/contrib/makefile/gen/lib",
+				);
+				OTHER_LDFLAGS = (
+					"$(PROJECT_DIR)/tensorflow/tensorflow/contrib/makefile/gen/protobuf_ios/lib/libprotobuf-lite.a",
+					"-force_load",
+					"$(PROJECT_DIR)/tensorflow/tensorflow/contrib/makefile/gen/lib/libtensorflow-core.a",
+					"$(PROJECT_DIR)/tensorflow/tensorflow/contrib/makefile/gen/protobuf_ios/lib/libprotobuf.a",
 				);
 				PRODUCT_BUNDLE_IDENTIFIER = charlotte.CameraRecognize;
 				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_OBJC_BRIDGING_HEADER = "CameraRecognize/CameraRecognize-Bridging-Header.h";
+				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
 				SWIFT_VERSION = 4.0;
 				TARGETED_DEVICE_FAMILY = "1,2";
 			};
@@ -350,19 +408,20 @@
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				CLANG_ENABLE_MODULES = YES;
 				CLANG_WARN_DOCUMENTATION_COMMENTS = NO;
 				CODE_SIGN_STYLE = Automatic;
 				DEVELOPMENT_TEAM = 4NNZ238874;
 				ENABLE_BITCODE = NO;
 				GCC_WARN_ABOUT_DEPRECATED_FUNCTIONS = NO;
 				HEADER_SEARCH_PATHS = (
-					"$(PROJECT_DIR)/tensorflow/tensorflow/contrib/makefile/downloads/protobuf/src",
-					"$(PROJECT_DIR)/tensorflow/tensorflow/contrib/makefile/downloads/nsync/public",
-					"$(PROJECT_DIR)/tensorflow/tensorflow/contrib/makefile/downloads/eigen",
-					"$(PROJECT_DIR)/tensorflow/tensorflow/contrib/makefile/gen",
+					"$(PROJECT_DIR)/tensorflow/tensorflow/contrib/makefile/downloads/protobuf/src\n",
+					"$(PROJECT_DIR)/tensorflow/tensorflow/contrib/makefile/downloads/nsync/public\n",
+					"$(PROJECT_DIR)/tensorflow/tensorflow/contrib/makefile/gen\n",
 					"$(PROJECT_DIR)",
+					"$(PROJECT_DIR)/tensorflow/tensorflow/contrib/makefile/downloads/eigen\n",
 					"$(PROJECT_DIR)/tensorflow/tensorflow/contrib/makefile/downloads",
-					"$(PROJECT_DIR)/tensorflow\n",
+					"$(PROJECT_DIR)/tensorflow",
 					"$(PROJECT_DIR)/tensorflow/tensorflow/contrib/makefile/gen/proto/\n",
 				);
 				INFOPLIST_FILE = CameraRecognize/Info.plist;
@@ -373,12 +432,19 @@
 				);
 				LIBRARY_SEARCH_PATHS = (
 					"$(inherited)",
-					"$(PROJECT_DIR)/tensorflow/tensorflow/contrib/makefile/gen/lib",
-					"$(PROJECT_DIR)/tensorflow/tensorflow/contrib/makefile/gen/protobuf_ios/lib",
 					"$(PROJECT_DIR)/tensorflow/tensorflow/contrib/makefile/downloads/nsync/builds/lipo.ios.c++11",
+					"$(PROJECT_DIR)/tensorflow/tensorflow/contrib/makefile/gen/protobuf_ios/lib",
+					"$(PROJECT_DIR)/tensorflow/tensorflow/contrib/makefile/gen/lib",
+				);
+				OTHER_LDFLAGS = (
+					"$(PROJECT_DIR)/tensorflow/tensorflow/contrib/makefile/gen/protobuf_ios/lib/libprotobuf-lite.a",
+					"-force_load",
+					"$(PROJECT_DIR)/tensorflow/tensorflow/contrib/makefile/gen/lib/libtensorflow-core.a",
+					"$(PROJECT_DIR)/tensorflow/tensorflow/contrib/makefile/gen/protobuf_ios/lib/libprotobuf.a",
 				);
 				PRODUCT_BUNDLE_IDENTIFIER = charlotte.CameraRecognize;
 				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_OBJC_BRIDGING_HEADER = "CameraRecognize/CameraRecognize-Bridging-Header.h";
 				SWIFT_VERSION = 4.0;
 				TARGETED_DEVICE_FAMILY = "1,2";
 			};
