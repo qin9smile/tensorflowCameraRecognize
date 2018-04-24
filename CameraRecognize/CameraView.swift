@@ -17,6 +17,7 @@ enum ScanDirection {
 // MARK: - Protocol
 
 /// CameraViewDelegate
+@objc
 protocol CameraViewDelegate {
 
   /// CameraView
@@ -26,6 +27,8 @@ protocol CameraViewDelegate {
   ///   - value: 本地图像识别的结果
   ///   - image: 用于本地图像识别的Image
   func cameraView(_ cameraView: CameraView, predictionValue value: CGFloat, predictionImage image: UIImage)
+  
+  @objc optional func cameraView(_ cameraView: CameraView, predicationValues values: [AnyHashable: Any], predictionImage image: UIImage)
 }
 
 // MARK: - CameraView
@@ -51,6 +54,7 @@ class CameraView: UIView {
     }
   }
 
+  /// 扫描线扫描方向
   public var scanAnimationDirection: ScanDirection = .vertical {
     didSet {
       _removeScanAnimation()
@@ -73,6 +77,9 @@ class CameraView: UIView {
     case .horizontal: return "position.x"
     }
   }
+  
+  /// 用于识别特定的Key
+  public var predicationKey: String?
 
   /// 相机上显示的遮罩路径
   public var overlayPath: UIBezierPath? {
@@ -227,13 +234,17 @@ extension CameraView: ImageRecognizerDelegate {
     }
 
     DispatchQueue.main.async {
-      guard let value = predicationValue["yes"] as? CGFloat else {
+      let image = UIImage(cgImage: cgImage)
+      self.delegate?.cameraView?(self, predicationValues: predicationValue, predictionImage: image)
+
+      guard let _predicationKey = self.predicationKey,
+        let value = predicationValue[_predicationKey] as? CGFloat else {
         return
       }
 
       if value > self.predictionValue {
         /// 识别结果正确
-        self.delegate?.cameraView(self, predictionValue: value, predictionImage: UIImage(cgImage: cgImage))
+        self.delegate?.cameraView(self, predictionValue: value, predictionImage: image)
       }
     }
   }
