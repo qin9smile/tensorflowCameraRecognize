@@ -6,6 +6,20 @@
 	objectVersion = 50;
 	objects = {
 
+/* Begin PBXAggregateTarget section */
+		9E5E23D820908C4000B732E0 /* Swift-lint */ = {
+			isa = PBXAggregateTarget;
+			buildConfigurationList = 9E5E23DB20908C4000B732E0 /* Build configuration list for PBXAggregateTarget "Swift-lint" */;
+			buildPhases = (
+				9E5E23DC20908C4900B732E0 /* ShellScript */,
+			);
+			dependencies = (
+			);
+			name = "Swift-lint";
+			productName = "Swift-lint";
+		};
+/* End PBXAggregateTarget section */
+
 /* Begin PBXBuildFile section */
 		9E404B66208D7F4A0025423D /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9E404B65208D7F4A0025423D /* AppDelegate.swift */; };
 		9E404B68208D7F4A0025423D /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9E404B67208D7F4A0025423D /* ViewController.swift */; };
@@ -22,6 +36,7 @@
 		9E5E22D0208EDB2B00B732E0 /* imagenet_comp_graph_label_strings.txt in Resources */ = {isa = PBXBuildFile; fileRef = 9E5E22CE208EDB2B00B732E0 /* imagenet_comp_graph_label_strings.txt */; };
 		9E5E22D1208EDB2B00B732E0 /* tensorflow_inception_graph.pb in Resources */ = {isa = PBXBuildFile; fileRef = 9E5E22CF208EDB2B00B732E0 /* tensorflow_inception_graph.pb */; };
 		9E5E22D3208EDB9200B732E0 /* CameraView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9E5E22D2208EDB9200B732E0 /* CameraView.swift */; };
+		9E5E23E420908C7D00B732E0 /* .swiftlint.yml in Resources */ = {isa = PBXBuildFile; fileRef = 9E5E23E320908C7D00B732E0 /* .swiftlint.yml */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -46,6 +61,7 @@
 		9E5E22CE208EDB2B00B732E0 /* imagenet_comp_graph_label_strings.txt */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; path = imagenet_comp_graph_label_strings.txt; sourceTree = "<group>"; };
 		9E5E22CF208EDB2B00B732E0 /* tensorflow_inception_graph.pb */ = {isa = PBXFileReference; lastKnownFileType = file; path = tensorflow_inception_graph.pb; sourceTree = "<group>"; };
 		9E5E22D2208EDB9200B732E0 /* CameraView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = CameraView.swift; sourceTree = "<group>"; };
+		9E5E23E320908C7D00B732E0 /* .swiftlint.yml */ = {isa = PBXFileReference; lastKnownFileType = text; path = .swiftlint.yml; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -67,6 +83,7 @@
 		9E404B59208D7F490025423D = {
 			isa = PBXGroup;
 			children = (
+				9E5E23E320908C7D00B732E0 /* .swiftlint.yml */,
 				9E5E228D208DCAB900B732E0 /* README.md */,
 				9E404B64208D7F490025423D /* CameraRecognize */,
 				9E404B63208D7F490025423D /* Products */,
@@ -173,6 +190,9 @@
 						CreatedOnToolsVersion = 9.3;
 						LastSwiftMigration = 0930;
 					};
+					9E5E23D820908C4000B732E0 = {
+						CreatedOnToolsVersion = 9.3;
+					};
 				};
 			};
 			buildConfigurationList = 9E404B5D208D7F490025423D /* Build configuration list for PBXProject "CameraRecognize" */;
@@ -189,6 +209,7 @@
 			projectRoot = "";
 			targets = (
 				9E404B61208D7F490025423D /* CameraRecognize */,
+				9E5E23D820908C4000B732E0 /* Swift-lint */,
 			);
 		};
 /* End PBXProject section */
@@ -198,6 +219,7 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				9E5E23E420908C7D00B732E0 /* .swiftlint.yml in Resources */,
 				9E5E22D0208EDB2B00B732E0 /* imagenet_comp_graph_label_strings.txt in Resources */,
 				9E404B70208D7F4C0025423D /* LaunchScreen.storyboard in Resources */,
 				9E404B6D208D7F4C0025423D /* Assets.xcassets in Resources */,
@@ -207,6 +229,22 @@
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 /* End PBXResourcesBuildPhase section */
+
+/* Begin PBXShellScriptBuildPhase section */
+		9E5E23DC20908C4900B732E0 /* ShellScript */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "if which swiftlint >/dev/null; then\nswiftlint\nelse\necho \"warning: SwiftLint not installed, download from https://github.com/realm/SwiftLint\"\nfi\n";
+		};
+/* End PBXShellScriptBuildPhase section */
 
 /* Begin PBXSourcesBuildPhase section */
 		9E404B5E208D7F490025423D /* Sources */ = {
@@ -450,6 +488,24 @@
 			};
 			name = Release;
 		};
+		9E5E23D920908C4000B732E0 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				CODE_SIGN_STYLE = Automatic;
+				DEVELOPMENT_TEAM = 4NNZ238874;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+			};
+			name = Debug;
+		};
+		9E5E23DA20908C4000B732E0 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				CODE_SIGN_STYLE = Automatic;
+				DEVELOPMENT_TEAM = 4NNZ238874;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+			};
+			name = Release;
+		};
 /* End XCBuildConfiguration section */
 
 /* Begin XCConfigurationList section */
@@ -467,6 +523,15 @@
 			buildConfigurations = (
 				9E404B75208D7F4C0025423D /* Debug */,
 				9E404B76208D7F4C0025423D /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		9E5E23DB20908C4000B732E0 /* Build configuration list for PBXAggregateTarget "Swift-lint" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				9E5E23D920908C4000B732E0 /* Debug */,
+				9E5E23DA20908C4000B732E0 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
 			defaultConfigurationName = Release;
