@@ -32,18 +32,12 @@
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
-		9E404B65208D7F4A0025423D /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
-		9E404B6A208D7F4A0025423D /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
-		9E404B6C208D7F4C0025423D /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
-		9E404B6F208D7F4C0025423D /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
-		9E404B71208D7F4C0025423D /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		9E5E228D208DCAB900B732E0 /* README.md */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = net.daringfireball.markdown; path = README.md; sourceTree = "<group>"; };
 		9E5E2290208DCACE00B732E0 /* Accelerate.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Accelerate.framework; path = System/Library/Frameworks/Accelerate.framework; sourceTree = SDKROOT; };
 		9E5E2292208DCAEB00B732E0 /* libtensorflow-core.a */ = {isa = PBXFileReference; lastKnownFileType = archive.ar; name = "libtensorflow-core.a"; path = "tensorflow/tensorflow/contrib/makefile/gen/lib/libtensorflow-core.a"; sourceTree = "<group>"; };
 		9E5E2294208DCB1000B732E0 /* libprotobuf-lite.a */ = {isa = PBXFileReference; lastKnownFileType = archive.ar; name = "libprotobuf-lite.a"; path = "tensorflow/tensorflow/contrib/makefile/gen/protobuf_ios/lib/libprotobuf-lite.a"; sourceTree = "<group>"; };
 		9E5E2295208DCB1000B732E0 /* libprotobuf.a */ = {isa = PBXFileReference; lastKnownFileType = archive.ar; name = libprotobuf.a; path = tensorflow/tensorflow/contrib/makefile/gen/protobuf_ios/lib/libprotobuf.a; sourceTree = "<group>"; };
 		9E5E2298208DCB3D00B732E0 /* nsync.a */ = {isa = PBXFileReference; lastKnownFileType = archive.ar; name = nsync.a; path = "tensorflow/tensorflow/contrib/makefile/downloads/nsync/builds/lipo.ios.c++11/nsync.a"; sourceTree = "<group>"; };
-		9E5E22B8208EC99B00B732E0 /* CameraRecognize-Bridging-Header.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "CameraRecognize-Bridging-Header.h"; sourceTree = "<group>"; };
 		9E5E23E320908C7D00B732E0 /* .swiftlint.yml */ = {isa = PBXFileReference; lastKnownFileType = text; path = .swiftlint.yml; sourceTree = "<group>"; };
 		9E5E242220919B1800B732E0 /* CameraRecognition.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = CameraRecognition.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		9E5E242420919B1800B732E0 /* CameraRecognition.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = CameraRecognition.h; sourceTree = "<group>"; };
@@ -73,7 +67,6 @@
 			children = (
 				9E5E23E320908C7D00B732E0 /* .swiftlint.yml */,
 				9E5E228D208DCAB900B732E0 /* README.md */,
-				9E404B64208D7F490025423D /* CameraRecognize */,
 				9E5E242320919B1800B732E0 /* CameraRecognition */,
 				9E404B63208D7F490025423D /* Products */,
 				9E5E228F208DCACE00B732E0 /* Frameworks */,
@@ -86,19 +79,6 @@
 				9E5E242220919B1800B732E0 /* CameraRecognition.framework */,
 			);
 			name = Products;
-			sourceTree = "<group>";
-		};
-		9E404B64208D7F490025423D /* CameraRecognize */ = {
-			isa = PBXGroup;
-			children = (
-				9E404B65208D7F4A0025423D /* AppDelegate.swift */,
-				9E404B69208D7F4A0025423D /* Main.storyboard */,
-				9E404B6C208D7F4C0025423D /* Assets.xcassets */,
-				9E404B6E208D7F4C0025423D /* LaunchScreen.storyboard */,
-				9E404B71208D7F4C0025423D /* Info.plist */,
-				9E5E22B8208EC99B00B732E0 /* CameraRecognize-Bridging-Header.h */,
-			);
-			path = CameraRecognize;
 			sourceTree = "<group>";
 		};
 		9E5E228F208DCACE00B732E0 /* Frameworks */ = {
@@ -265,25 +245,6 @@
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 /* End PBXSourcesBuildPhase section */
-
-/* Begin PBXVariantGroup section */
-		9E404B69208D7F4A0025423D /* Main.storyboard */ = {
-			isa = PBXVariantGroup;
-			children = (
-				9E404B6A208D7F4A0025423D /* Base */,
-			);
-			name = Main.storyboard;
-			sourceTree = "<group>";
-		};
-		9E404B6E208D7F4C0025423D /* LaunchScreen.storyboard */ = {
-			isa = PBXVariantGroup;
-			children = (
-				9E404B6F208D7F4C0025423D /* Base */,
-			);
-			name = LaunchScreen.storyboard;
-			sourceTree = "<group>";
-		};
-/* End PBXVariantGroup section */
 
 /* Begin XCBuildConfiguration section */
 		9E404B72208D7F4C0025423D /* Debug */ = {
