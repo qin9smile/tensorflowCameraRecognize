@@ -7,6 +7,7 @@
 //
 
 #import <UIKit/UIKit.h>
+#import "ImageRecognizer.h"
 
 //! Project version number for CameraRecognition.
 FOUNDATION_EXPORT double CameraRecognitionVersionNumber;
