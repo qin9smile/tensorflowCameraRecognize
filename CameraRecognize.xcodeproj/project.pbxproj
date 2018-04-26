@@ -21,55 +21,18 @@
 /* End PBXAggregateTarget section */
 
 /* Begin PBXBuildFile section */
-		9E404B66208D7F4A0025423D /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9E404B65208D7F4A0025423D /* AppDelegate.swift */; };
-		9E404B68208D7F4A0025423D /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9E404B67208D7F4A0025423D /* ViewController.swift */; };
-		9E404B6B208D7F4A0025423D /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 9E404B69208D7F4A0025423D /* Main.storyboard */; };
-		9E404B6D208D7F4C0025423D /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 9E404B6C208D7F4C0025423D /* Assets.xcassets */; };
-		9E404B70208D7F4C0025423D /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 9E404B6E208D7F4C0025423D /* LaunchScreen.storyboard */; };
-		9E5E2291208DCACE00B732E0 /* Accelerate.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 9E5E2290208DCACE00B732E0 /* Accelerate.framework */; };
-		9E5E22AE208EC82D00B732E0 /* nsync.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 9E5E2298208DCB3D00B732E0 /* nsync.a */; };
-		9E5E22AF208EC82D00B732E0 /* libprotobuf-lite.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 9E5E2294208DCB1000B732E0 /* libprotobuf-lite.a */; };
-		9E5E22B0208EC82D00B732E0 /* libprotobuf.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 9E5E2295208DCB1000B732E0 /* libprotobuf.a */; };
-		9E5E22B1208EC84900B732E0 /* libtensorflow-core.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 9E5E2292208DCAEB00B732E0 /* libtensorflow-core.a */; };
-		9E5E22C9208ECB5800B732E0 /* ImageRecognizer.mm in Sources */ = {isa = PBXBuildFile; fileRef = 9E5E22C8208ECB5700B732E0 /* ImageRecognizer.mm */; };
-		9E5E22CD208ECB5E00B732E0 /* tensorflow_utils.mm in Sources */ = {isa = PBXBuildFile; fileRef = 9E5E22CB208ECB5E00B732E0 /* tensorflow_utils.mm */; };
-		9E5E22D0208EDB2B00B732E0 /* imagenet_comp_graph_label_strings.txt in Resources */ = {isa = PBXBuildFile; fileRef = 9E5E22CE208EDB2B00B732E0 /* imagenet_comp_graph_label_strings.txt */; };
-		9E5E22D1208EDB2B00B732E0 /* tensorflow_inception_graph.pb in Resources */ = {isa = PBXBuildFile; fileRef = 9E5E22CF208EDB2B00B732E0 /* tensorflow_inception_graph.pb */; };
-		9E5E22D3208EDB9200B732E0 /* CameraView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9E5E22D2208EDB9200B732E0 /* CameraView.swift */; };
-		9E5E23E420908C7D00B732E0 /* .swiftlint.yml in Resources */ = {isa = PBXBuildFile; fileRef = 9E5E23E320908C7D00B732E0 /* .swiftlint.yml */; };
 		9E5E242620919B1800B732E0 /* CameraRecognition.h in Headers */ = {isa = PBXBuildFile; fileRef = 9E5E242420919B1800B732E0 /* CameraRecognition.h */; settings = {ATTRIBUTES = (Public, ); }; };
-		9E5E242920919B1800B732E0 /* CameraRecognition.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 9E5E242220919B1800B732E0 /* CameraRecognition.framework */; };
-		9E5E242B20919B1800B732E0 /* CameraRecognition.framework in Embed Frameworks */ = {isa = PBXBuildFile; fileRef = 9E5E242220919B1800B732E0 /* CameraRecognition.framework */; settings = {ATTRIBUTES = (CodeSignOnCopy, RemoveHeadersOnCopy, ); }; };
+		9E5E243920919B8E00B732E0 /* CameraView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9E5E242F20919B8E00B732E0 /* CameraView.swift */; };
+		9E5E243A20919B8E00B732E0 /* ImageRecognizer.h in Headers */ = {isa = PBXBuildFile; fileRef = 9E5E243120919B8E00B732E0 /* ImageRecognizer.h */; };
+		9E5E243B20919B8E00B732E0 /* ImageRecognizer.mm in Sources */ = {isa = PBXBuildFile; fileRef = 9E5E243220919B8E00B732E0 /* ImageRecognizer.mm */; };
+		9E5E243C20919B8E00B732E0 /* tensorflow_inception_graph.pb in Resources */ = {isa = PBXBuildFile; fileRef = 9E5E243420919B8E00B732E0 /* tensorflow_inception_graph.pb */; };
+		9E5E243D20919B8F00B732E0 /* imagenet_comp_graph_label_strings.txt in Resources */ = {isa = PBXBuildFile; fileRef = 9E5E243520919B8E00B732E0 /* imagenet_comp_graph_label_strings.txt */; };
+		9E5E243E20919B8F00B732E0 /* tensorflow_utils.mm in Sources */ = {isa = PBXBuildFile; fileRef = 9E5E243720919B8E00B732E0 /* tensorflow_utils.mm */; };
+		9E5E243F20919B8F00B732E0 /* tensorflow_utils.h in Headers */ = {isa = PBXBuildFile; fileRef = 9E5E243820919B8E00B732E0 /* tensorflow_utils.h */; };
 /* End PBXBuildFile section */
 
-/* Begin PBXContainerItemProxy section */
-		9E5E242720919B1800B732E0 /* PBXContainerItemProxy */ = {
-			isa = PBXContainerItemProxy;
-			containerPortal = 9E404B5A208D7F490025423D /* Project object */;
-			proxyType = 1;
-			remoteGlobalIDString = 9E5E242120919B1800B732E0;
-			remoteInfo = CameraRecognition;
-		};
-/* End PBXContainerItemProxy section */
-
-/* Begin PBXCopyFilesBuildPhase section */
-		9E5E242A20919B1800B732E0 /* Embed Frameworks */ = {
-			isa = PBXCopyFilesBuildPhase;
-			buildActionMask = 2147483647;
-			dstPath = "";
-			dstSubfolderSpec = 10;
-			files = (
-				9E5E242B20919B1800B732E0 /* CameraRecognition.framework in Embed Frameworks */,
-			);
-			name = "Embed Frameworks";
-			runOnlyForDeploymentPostprocessing = 0;
-		};
-/* End PBXCopyFilesBuildPhase section */
-
 /* Begin PBXFileReference section */
-		9E404B62208D7F490025423D /* CameraRecognize.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = CameraRecognize.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		9E404B65208D7F4A0025423D /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
-		9E404B67208D7F4A0025423D /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
 		9E404B6A208D7F4A0025423D /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
 		9E404B6C208D7F4C0025423D /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		9E404B6F208D7F4C0025423D /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
@@ -81,33 +44,20 @@
 		9E5E2295208DCB1000B732E0 /* libprotobuf.a */ = {isa = PBXFileReference; lastKnownFileType = archive.ar; name = libprotobuf.a; path = tensorflow/tensorflow/contrib/makefile/gen/protobuf_ios/lib/libprotobuf.a; sourceTree = "<group>"; };
 		9E5E2298208DCB3D00B732E0 /* nsync.a */ = {isa = PBXFileReference; lastKnownFileType = archive.ar; name = nsync.a; path = "tensorflow/tensorflow/contrib/makefile/downloads/nsync/builds/lipo.ios.c++11/nsync.a"; sourceTree = "<group>"; };
 		9E5E22B8208EC99B00B732E0 /* CameraRecognize-Bridging-Header.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "CameraRecognize-Bridging-Header.h"; sourceTree = "<group>"; };
-		9E5E22C7208ECB5700B732E0 /* ImageRecognizer.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ImageRecognizer.h; sourceTree = "<group>"; };
-		9E5E22C8208ECB5700B732E0 /* ImageRecognizer.mm */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.objcpp; path = ImageRecognizer.mm; sourceTree = "<group>"; };
-		9E5E22CB208ECB5E00B732E0 /* tensorflow_utils.mm */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.objcpp; path = tensorflow_utils.mm; sourceTree = "<group>"; };
-		9E5E22CC208ECB5E00B732E0 /* tensorflow_utils.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = tensorflow_utils.h; sourceTree = "<group>"; };
-		9E5E22CE208EDB2B00B732E0 /* imagenet_comp_graph_label_strings.txt */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; path = imagenet_comp_graph_label_strings.txt; sourceTree = "<group>"; };
-		9E5E22CF208EDB2B00B732E0 /* tensorflow_inception_graph.pb */ = {isa = PBXFileReference; lastKnownFileType = file; path = tensorflow_inception_graph.pb; sourceTree = "<group>"; };
-		9E5E22D2208EDB9200B732E0 /* CameraView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = CameraView.swift; sourceTree = "<group>"; };
 		9E5E23E320908C7D00B732E0 /* .swiftlint.yml */ = {isa = PBXFileReference; lastKnownFileType = text; path = .swiftlint.yml; sourceTree = "<group>"; };
 		9E5E242220919B1800B732E0 /* CameraRecognition.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = CameraRecognition.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		9E5E242420919B1800B732E0 /* CameraRecognition.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = CameraRecognition.h; sourceTree = "<group>"; };
 		9E5E242520919B1800B732E0 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		9E5E242F20919B8E00B732E0 /* CameraView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = CameraView.swift; sourceTree = "<group>"; };
+		9E5E243120919B8E00B732E0 /* ImageRecognizer.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ImageRecognizer.h; sourceTree = "<group>"; };
+		9E5E243220919B8E00B732E0 /* ImageRecognizer.mm */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.objcpp; path = ImageRecognizer.mm; sourceTree = "<group>"; };
+		9E5E243420919B8E00B732E0 /* tensorflow_inception_graph.pb */ = {isa = PBXFileReference; lastKnownFileType = file; path = tensorflow_inception_graph.pb; sourceTree = "<group>"; };
+		9E5E243520919B8E00B732E0 /* imagenet_comp_graph_label_strings.txt */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; path = imagenet_comp_graph_label_strings.txt; sourceTree = "<group>"; };
+		9E5E243720919B8E00B732E0 /* tensorflow_utils.mm */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.objcpp; path = tensorflow_utils.mm; sourceTree = "<group>"; };
+		9E5E243820919B8E00B732E0 /* tensorflow_utils.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = tensorflow_utils.h; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
-		9E404B5F208D7F490025423D /* Frameworks */ = {
-			isa = PBXFrameworksBuildPhase;
-			buildActionMask = 2147483647;
-			files = (
-				9E5E22B1208EC84900B732E0 /* libtensorflow-core.a in Frameworks */,
-				9E5E22AE208EC82D00B732E0 /* nsync.a in Frameworks */,
-				9E5E22AF208EC82D00B732E0 /* libprotobuf-lite.a in Frameworks */,
-				9E5E22B0208EC82D00B732E0 /* libprotobuf.a in Frameworks */,
-				9E5E2291208DCACE00B732E0 /* Accelerate.framework in Frameworks */,
-				9E5E242920919B1800B732E0 /* CameraRecognition.framework in Frameworks */,
-			);
-			runOnlyForDeploymentPostprocessing = 0;
-		};
 		9E5E241E20919B1800B732E0 /* Frameworks */ = {
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
@@ -133,7 +83,6 @@
 		9E404B63208D7F490025423D /* Products */ = {
 			isa = PBXGroup;
 			children = (
-				9E404B62208D7F490025423D /* CameraRecognize.app */,
 				9E5E242220919B1800B732E0 /* CameraRecognition.framework */,
 			);
 			name = Products;
@@ -142,12 +91,7 @@
 		9E404B64208D7F490025423D /* CameraRecognize */ = {
 			isa = PBXGroup;
 			children = (
-				9E5E22CA208ECB5E00B732E0 /* utils */,
-				9E5E22C6208ECB5700B732E0 /* recognizer */,
-				9E5E22C1208ECB4D00B732E0 /* data */,
 				9E404B65208D7F4A0025423D /* AppDelegate.swift */,
-				9E404B67208D7F4A0025423D /* ViewController.swift */,
-				9E5E22D2208EDB9200B732E0 /* CameraView.swift */,
 				9E404B69208D7F4A0025423D /* Main.storyboard */,
 				9E404B6C208D7F4C0025423D /* Assets.xcassets */,
 				9E404B6E208D7F4C0025423D /* LaunchScreen.storyboard */,
@@ -169,40 +113,44 @@
 			name = Frameworks;
 			sourceTree = "<group>";
 		};
-		9E5E22C1208ECB4D00B732E0 /* data */ = {
-			isa = PBXGroup;
-			children = (
-				9E5E22CE208EDB2B00B732E0 /* imagenet_comp_graph_label_strings.txt */,
-				9E5E22CF208EDB2B00B732E0 /* tensorflow_inception_graph.pb */,
-			);
-			path = data;
-			sourceTree = "<group>";
-		};
-		9E5E22C6208ECB5700B732E0 /* recognizer */ = {
-			isa = PBXGroup;
-			children = (
-				9E5E22C7208ECB5700B732E0 /* ImageRecognizer.h */,
-				9E5E22C8208ECB5700B732E0 /* ImageRecognizer.mm */,
-			);
-			path = recognizer;
-			sourceTree = "<group>";
-		};
-		9E5E22CA208ECB5E00B732E0 /* utils */ = {
-			isa = PBXGroup;
-			children = (
-				9E5E22CB208ECB5E00B732E0 /* tensorflow_utils.mm */,
-				9E5E22CC208ECB5E00B732E0 /* tensorflow_utils.h */,
-			);
-			path = utils;
-			sourceTree = "<group>";
-		};
 		9E5E242320919B1800B732E0 /* CameraRecognition */ = {
 			isa = PBXGroup;
 			children = (
+				9E5E242F20919B8E00B732E0 /* CameraView.swift */,
+				9E5E243320919B8E00B732E0 /* data */,
+				9E5E243020919B8E00B732E0 /* recognizer */,
+				9E5E243620919B8E00B732E0 /* utils */,
 				9E5E242420919B1800B732E0 /* CameraRecognition.h */,
 				9E5E242520919B1800B732E0 /* Info.plist */,
 			);
 			path = CameraRecognition;
+			sourceTree = "<group>";
+		};
+		9E5E243020919B8E00B732E0 /* recognizer */ = {
+			isa = PBXGroup;
+			children = (
+				9E5E243120919B8E00B732E0 /* ImageRecognizer.h */,
+				9E5E243220919B8E00B732E0 /* ImageRecognizer.mm */,
+			);
+			path = recognizer;
+			sourceTree = "<group>";
+		};
+		9E5E243320919B8E00B732E0 /* data */ = {
+			isa = PBXGroup;
+			children = (
+				9E5E243420919B8E00B732E0 /* tensorflow_inception_graph.pb */,
+				9E5E243520919B8E00B732E0 /* imagenet_comp_graph_label_strings.txt */,
+			);
+			path = data;
+			sourceTree = "<group>";
+		};
+		9E5E243620919B8E00B732E0 /* utils */ = {
+			isa = PBXGroup;
+			children = (
+				9E5E243720919B8E00B732E0 /* tensorflow_utils.mm */,
+				9E5E243820919B8E00B732E0 /* tensorflow_utils.h */,
+			);
+			path = utils;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -212,6 +160,8 @@
 			isa = PBXHeadersBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				9E5E243F20919B8F00B732E0 /* tensorflow_utils.h in Headers */,
+				9E5E243A20919B8E00B732E0 /* ImageRecognizer.h in Headers */,
 				9E5E242620919B1800B732E0 /* CameraRecognition.h in Headers */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -219,25 +169,6 @@
 /* End PBXHeadersBuildPhase section */
 
 /* Begin PBXNativeTarget section */
-		9E404B61208D7F490025423D /* CameraRecognize */ = {
-			isa = PBXNativeTarget;
-			buildConfigurationList = 9E404B74208D7F4C0025423D /* Build configuration list for PBXNativeTarget "CameraRecognize" */;
-			buildPhases = (
-				9E404B5E208D7F490025423D /* Sources */,
-				9E404B5F208D7F490025423D /* Frameworks */,
-				9E404B60208D7F490025423D /* Resources */,
-				9E5E242A20919B1800B732E0 /* Embed Frameworks */,
-			);
-			buildRules = (
-			);
-			dependencies = (
-				9E5E242820919B1800B732E0 /* PBXTargetDependency */,
-			);
-			name = CameraRecognize;
-			productName = CameraRecognize;
-			productReference = 9E404B62208D7F490025423D /* CameraRecognize.app */;
-			productType = "com.apple.product-type.application";
-		};
 		9E5E242120919B1800B732E0 /* CameraRecognition */ = {
 			isa = PBXNativeTarget;
 			buildConfigurationList = 9E5E242E20919B1800B732E0 /* Build configuration list for PBXNativeTarget "CameraRecognition" */;
@@ -266,15 +197,12 @@
 				LastUpgradeCheck = 0930;
 				ORGANIZATIONNAME = "宇宙超级无敌可爱美少女";
 				TargetAttributes = {
-					9E404B61208D7F490025423D = {
-						CreatedOnToolsVersion = 9.3;
-						LastSwiftMigration = 0930;
-					};
 					9E5E23D820908C4000B732E0 = {
 						CreatedOnToolsVersion = 9.3;
 					};
 					9E5E242120919B1800B732E0 = {
 						CreatedOnToolsVersion = 9.3;
+						LastSwiftMigration = 0930;
 					};
 				};
 			};
@@ -291,7 +219,6 @@
 			projectDirPath = "";
 			projectRoot = "";
 			targets = (
-				9E404B61208D7F490025423D /* CameraRecognize */,
 				9E5E23D820908C4000B732E0 /* Swift-lint */,
 				9E5E242120919B1800B732E0 /* CameraRecognition */,
 			);
@@ -299,23 +226,12 @@
 /* End PBXProject section */
 
 /* Begin PBXResourcesBuildPhase section */
-		9E404B60208D7F490025423D /* Resources */ = {
-			isa = PBXResourcesBuildPhase;
-			buildActionMask = 2147483647;
-			files = (
-				9E5E23E420908C7D00B732E0 /* .swiftlint.yml in Resources */,
-				9E5E22D0208EDB2B00B732E0 /* imagenet_comp_graph_label_strings.txt in Resources */,
-				9E404B70208D7F4C0025423D /* LaunchScreen.storyboard in Resources */,
-				9E404B6D208D7F4C0025423D /* Assets.xcassets in Resources */,
-				9E404B6B208D7F4A0025423D /* Main.storyboard in Resources */,
-				9E5E22D1208EDB2B00B732E0 /* tensorflow_inception_graph.pb in Resources */,
-			);
-			runOnlyForDeploymentPostprocessing = 0;
-		};
 		9E5E242020919B1800B732E0 /* Resources */ = {
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				9E5E243D20919B8F00B732E0 /* imagenet_comp_graph_label_strings.txt in Resources */,
+				9E5E243C20919B8E00B732E0 /* tensorflow_inception_graph.pb in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -338,34 +254,17 @@
 /* End PBXShellScriptBuildPhase section */
 
 /* Begin PBXSourcesBuildPhase section */
-		9E404B5E208D7F490025423D /* Sources */ = {
-			isa = PBXSourcesBuildPhase;
-			buildActionMask = 2147483647;
-			files = (
-				9E5E22C9208ECB5800B732E0 /* ImageRecognizer.mm in Sources */,
-				9E404B68208D7F4A0025423D /* ViewController.swift in Sources */,
-				9E5E22CD208ECB5E00B732E0 /* tensorflow_utils.mm in Sources */,
-				9E5E22D3208EDB9200B732E0 /* CameraView.swift in Sources */,
-				9E404B66208D7F4A0025423D /* AppDelegate.swift in Sources */,
-			);
-			runOnlyForDeploymentPostprocessing = 0;
-		};
 		9E5E241D20919B1800B732E0 /* Sources */ = {
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				9E5E243E20919B8F00B732E0 /* tensorflow_utils.mm in Sources */,
+				9E5E243920919B8E00B732E0 /* CameraView.swift in Sources */,
+				9E5E243B20919B8E00B732E0 /* ImageRecognizer.mm in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 /* End PBXSourcesBuildPhase section */
-
-/* Begin PBXTargetDependency section */
-		9E5E242820919B1800B732E0 /* PBXTargetDependency */ = {
-			isa = PBXTargetDependency;
-			target = 9E5E242120919B1800B732E0 /* CameraRecognition */;
-			targetProxy = 9E5E242720919B1800B732E0 /* PBXContainerItemProxy */;
-		};
-/* End PBXTargetDependency section */
 
 /* Begin PBXVariantGroup section */
 		9E404B69208D7F4A0025423D /* Main.storyboard */ = {
@@ -501,99 +400,6 @@
 			};
 			name = Release;
 		};
-		9E404B75208D7F4C0025423D /* Debug */ = {
-			isa = XCBuildConfiguration;
-			buildSettings = {
-				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
-				CLANG_ENABLE_MODULES = YES;
-				CLANG_WARN_DOCUMENTATION_COMMENTS = NO;
-				CODE_SIGN_STYLE = Automatic;
-				DEVELOPMENT_TEAM = 4NNZ238874;
-				ENABLE_BITCODE = NO;
-				GCC_WARN_ABOUT_DEPRECATED_FUNCTIONS = NO;
-				HEADER_SEARCH_PATHS = (
-					"$(PROJECT_DIR)/tensorflow/tensorflow/contrib/makefile/downloads/protobuf/src\n",
-					"$(PROJECT_DIR)/tensorflow/tensorflow/contrib/makefile/downloads/nsync/public\n",
-					"$(PROJECT_DIR)/tensorflow/tensorflow/contrib/makefile/gen\n",
-					"$(PROJECT_DIR)",
-					"$(PROJECT_DIR)/tensorflow/tensorflow/contrib/makefile/downloads/eigen\n",
-					"$(PROJECT_DIR)/tensorflow/tensorflow/contrib/makefile/downloads",
-					"$(PROJECT_DIR)/tensorflow",
-					"$(PROJECT_DIR)/tensorflow/tensorflow/contrib/makefile/gen/proto/\n",
-				);
-				INFOPLIST_FILE = CameraRecognize/Info.plist;
-				IPHONEOS_DEPLOYMENT_TARGET = 9.0;
-				LD_RUNPATH_SEARCH_PATHS = (
-					"$(inherited)",
-					"@executable_path/Frameworks",
-				);
-				LIBRARY_SEARCH_PATHS = (
-					"$(inherited)",
-					"$(PROJECT_DIR)/tensorflow/tensorflow/contrib/makefile/downloads/nsync/builds/lipo.ios.c++11",
-					"$(PROJECT_DIR)/tensorflow/tensorflow/contrib/makefile/gen/protobuf_ios/lib",
-					"$(PROJECT_DIR)/tensorflow/tensorflow/contrib/makefile/gen/lib",
-				);
-				OTHER_LDFLAGS = (
-					"$(PROJECT_DIR)/tensorflow/tensorflow/contrib/makefile/gen/protobuf_ios/lib/libprotobuf-lite.a",
-					"-force_load",
-					"$(PROJECT_DIR)/tensorflow/tensorflow/contrib/makefile/gen/lib/libtensorflow-core.a",
-					"$(PROJECT_DIR)/tensorflow/tensorflow/contrib/makefile/gen/protobuf_ios/lib/libprotobuf.a",
-				);
-				PRODUCT_BUNDLE_IDENTIFIER = charlotte.CameraRecognize;
-				PRODUCT_NAME = "$(TARGET_NAME)";
-				SWIFT_OBJC_BRIDGING_HEADER = "CameraRecognize/CameraRecognize-Bridging-Header.h";
-				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
-				SWIFT_VERSION = 4.0;
-				TARGETED_DEVICE_FAMILY = "1,2";
-			};
-			name = Debug;
-		};
-		9E404B76208D7F4C0025423D /* Release */ = {
-			isa = XCBuildConfiguration;
-			buildSettings = {
-				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
-				CLANG_ENABLE_MODULES = YES;
-				CLANG_WARN_DOCUMENTATION_COMMENTS = NO;
-				CODE_SIGN_STYLE = Automatic;
-				DEVELOPMENT_TEAM = 4NNZ238874;
-				ENABLE_BITCODE = NO;
-				GCC_WARN_ABOUT_DEPRECATED_FUNCTIONS = NO;
-				HEADER_SEARCH_PATHS = (
-					"$(PROJECT_DIR)/tensorflow/tensorflow/contrib/makefile/downloads/protobuf/src\n",
-					"$(PROJECT_DIR)/tensorflow/tensorflow/contrib/makefile/downloads/nsync/public\n",
-					"$(PROJECT_DIR)/tensorflow/tensorflow/contrib/makefile/gen\n",
-					"$(PROJECT_DIR)",
-					"$(PROJECT_DIR)/tensorflow/tensorflow/contrib/makefile/downloads/eigen\n",
-					"$(PROJECT_DIR)/tensorflow/tensorflow/contrib/makefile/downloads",
-					"$(PROJECT_DIR)/tensorflow",
-					"$(PROJECT_DIR)/tensorflow/tensorflow/contrib/makefile/gen/proto/\n",
-				);
-				INFOPLIST_FILE = CameraRecognize/Info.plist;
-				IPHONEOS_DEPLOYMENT_TARGET = 9.0;
-				LD_RUNPATH_SEARCH_PATHS = (
-					"$(inherited)",
-					"@executable_path/Frameworks",
-				);
-				LIBRARY_SEARCH_PATHS = (
-					"$(inherited)",
-					"$(PROJECT_DIR)/tensorflow/tensorflow/contrib/makefile/downloads/nsync/builds/lipo.ios.c++11",
-					"$(PROJECT_DIR)/tensorflow/tensorflow/contrib/makefile/gen/protobuf_ios/lib",
-					"$(PROJECT_DIR)/tensorflow/tensorflow/contrib/makefile/gen/lib",
-				);
-				OTHER_LDFLAGS = (
-					"$(PROJECT_DIR)/tensorflow/tensorflow/contrib/makefile/gen/protobuf_ios/lib/libprotobuf-lite.a",
-					"-force_load",
-					"$(PROJECT_DIR)/tensorflow/tensorflow/contrib/makefile/gen/lib/libtensorflow-core.a",
-					"$(PROJECT_DIR)/tensorflow/tensorflow/contrib/makefile/gen/protobuf_ios/lib/libprotobuf.a",
-				);
-				PRODUCT_BUNDLE_IDENTIFIER = charlotte.CameraRecognize;
-				PRODUCT_NAME = "$(TARGET_NAME)";
-				SWIFT_OBJC_BRIDGING_HEADER = "CameraRecognize/CameraRecognize-Bridging-Header.h";
-				SWIFT_VERSION = 4.0;
-				TARGETED_DEVICE_FAMILY = "1,2";
-			};
-			name = Release;
-		};
 		9E5E23D920908C4000B732E0 /* Debug */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
@@ -615,6 +421,7 @@
 		9E5E242C20919B1800B732E0 /* Debug */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
+				CLANG_ENABLE_MODULES = YES;
 				CODE_SIGN_IDENTITY = "";
 				CODE_SIGN_STYLE = Automatic;
 				CURRENT_PROJECT_VERSION = 1;
@@ -633,6 +440,7 @@
 				PRODUCT_BUNDLE_IDENTIFIER = charlotte.CameraRecognition;
 				PRODUCT_NAME = "$(TARGET_NAME:c99extidentifier)";
 				SKIP_INSTALL = YES;
+				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
 				SWIFT_VERSION = 4.0;
 				TARGETED_DEVICE_FAMILY = "1,2";
 				VERSIONING_SYSTEM = "apple-generic";
@@ -643,6 +451,7 @@
 		9E5E242D20919B1800B732E0 /* Release */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
+				CLANG_ENABLE_MODULES = YES;
 				CODE_SIGN_IDENTITY = "";
 				CODE_SIGN_STYLE = Automatic;
 				CURRENT_PROJECT_VERSION = 1;
@@ -676,15 +485,6 @@
 			buildConfigurations = (
 				9E404B72208D7F4C0025423D /* Debug */,
 				9E404B73208D7F4C0025423D /* Release */,
-			);
-			defaultConfigurationIsVisible = 0;
-			defaultConfigurationName = Release;
-		};
-		9E404B74208D7F4C0025423D /* Build configuration list for PBXNativeTarget "CameraRecognize" */ = {
-			isa = XCConfigurationList;
-			buildConfigurations = (
-				9E404B75208D7F4C0025423D /* Debug */,
-				9E404B76208D7F4C0025423D /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
 			defaultConfigurationName = Release;
