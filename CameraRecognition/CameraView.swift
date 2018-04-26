@@ -8,7 +8,8 @@
 
 import UIKit
 import AVFoundation
-
+let MODEL_FILE_NAME: String = "tensorflow_inception_graph"
+let LABEL_FILE_NAME: String = "imagenet_comp_graph_label_strings"
 enum ScanDirection {
   case vertical
   case horizontal
