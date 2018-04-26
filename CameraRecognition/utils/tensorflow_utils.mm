@@ -96,7 +96,8 @@ bool PortableReadFileToProto(const std::string& file_name,
 }
 
 NSString* FilePathForResourceName(NSString* name, NSString* extension) {
-  NSString* displayName = [[[NSBundle mainBundle] localizedInfoDictionary] objectForKey:@"CFBundleDisplayName"];
+//  NSString* displayName = [[[NSBundle mainBundle] localizedInfoDictionary] objectForKey:@"CFBundleName"];
+  NSString* displayName = @"CameraRecognition";
   NSString* bundle_path = [[NSString alloc] initWithFormat:@"/Frameworks/%@.framework", displayName];
   NSString* file_path =
   [[NSBundle mainBundle] pathForResource:name ofType:extension inDirectory: bundle_path];

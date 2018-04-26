@@ -8,9 +8,10 @@
 
 import UIKit
 import AVFoundation
+
 let MODEL_FILE_NAME: String = "tensorflow_inception_graph"
 let LABEL_FILE_NAME: String = "imagenet_comp_graph_label_strings"
-enum ScanDirection {
+public enum ScanDirection {
   case vertical
   case horizontal
 }
@@ -19,7 +20,7 @@ enum ScanDirection {
 
 /// CameraViewDelegate
 @objc
-protocol CameraViewDelegate {
+public protocol CameraViewDelegate {
 
   /// CameraView
   ///
@@ -34,7 +35,7 @@ protocol CameraViewDelegate {
 
 // MARK: - CameraView
 
-class CameraView: UIView {
+open class CameraView: UIView {
 
   // MARK: - Public Properties
 
@@ -182,16 +183,16 @@ class CameraView: UIView {
 
   // MARK: - Life Cycle
 
-  override init(frame: CGRect) {
+  public override init(frame: CGRect) {
     super.init(frame: frame)
     _init()
   }
 
-  convenience init() {
+  public convenience init() {
     self.init(frame: .zero)
   }
 
-  required init?(coder aDecoder: NSCoder) {
+  required public init?(coder aDecoder: NSCoder) {
     fatalError("init(coder:) has not been implemented")
   }
 
@@ -210,7 +211,7 @@ class CameraView: UIView {
 // MARK: - AVCaptureVideoDataOutputSampleBufferDelegate
 
 extension CameraView: AVCaptureVideoDataOutputSampleBufferDelegate {
-  func captureOutput(_ output: AVCaptureOutput, didOutput sampleBuffer: CMSampleBuffer, from connection: AVCaptureConnection) {
+  public func captureOutput(_ output: AVCaptureOutput, didOutput sampleBuffer: CMSampleBuffer, from connection: AVCaptureConnection) {
     /// 获取ImageBuffer
     guard let imageBuffer = CMSampleBufferGetImageBuffer(sampleBuffer) else {
       debugPrint("the CMSampleBuffer does not contain a CVImageBuffer.")
@@ -226,7 +227,7 @@ extension CameraView: AVCaptureVideoDataOutputSampleBufferDelegate {
 
 extension CameraView: ImageRecognizerDelegate {
   /// 识别返回结果
-  func imageRecognizer(_ predicationValue: [AnyHashable : Any]!, with pixelBuffer: CVPixelBuffer!) {
+  public func imageRecognizer(_ predicationValue: [AnyHashable : Any]!, with pixelBuffer: CVPixelBuffer!) {
     let ciImage = CIImage(cvImageBuffer: pixelBuffer)
     let context = CIContext()
     guard let cgImage = context.createCGImage(ciImage, from: ciImage.extent)  else {

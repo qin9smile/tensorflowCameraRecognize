@@ -37,7 +37,38 @@
 		9E5E244820919DE300B732E0 /* libprotobuf-lite.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 9E5E2294208DCB1000B732E0 /* libprotobuf-lite.a */; };
 		9E5E244920919DE300B732E0 /* libprotobuf.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 9E5E2295208DCB1000B732E0 /* libprotobuf.a */; };
 		9E5E244A20919DFA00B732E0 /* nsync.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 9E5E2298208DCB3D00B732E0 /* nsync.a */; };
+		9E5E24532091A33D00B732E0 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9E5E24522091A33D00B732E0 /* AppDelegate.swift */; };
+		9E5E24552091A33D00B732E0 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9E5E24542091A33D00B732E0 /* ViewController.swift */; };
+		9E5E24582091A33D00B732E0 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 9E5E24562091A33D00B732E0 /* Main.storyboard */; };
+		9E5E245A2091A34100B732E0 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 9E5E24592091A34100B732E0 /* Assets.xcassets */; };
+		9E5E245D2091A34100B732E0 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 9E5E245B2091A34100B732E0 /* LaunchScreen.storyboard */; };
+		9E5E24632091A42A00B732E0 /* CameraRecognition.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 9E5E242220919B1800B732E0 /* CameraRecognition.framework */; };
+		9E5E24642091A42A00B732E0 /* CameraRecognition.framework in Embed Frameworks */ = {isa = PBXBuildFile; fileRef = 9E5E242220919B1800B732E0 /* CameraRecognition.framework */; settings = {ATTRIBUTES = (CodeSignOnCopy, RemoveHeadersOnCopy, ); }; };
 /* End PBXBuildFile section */
+
+/* Begin PBXContainerItemProxy section */
+		9E5E24652091A42A00B732E0 /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = 9E404B5A208D7F490025423D /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = 9E5E242120919B1800B732E0;
+			remoteInfo = CameraRecognition;
+		};
+/* End PBXContainerItemProxy section */
+
+/* Begin PBXCopyFilesBuildPhase section */
+		9E5E24672091A42B00B732E0 /* Embed Frameworks */ = {
+			isa = PBXCopyFilesBuildPhase;
+			buildActionMask = 2147483647;
+			dstPath = "";
+			dstSubfolderSpec = 10;
+			files = (
+				9E5E24642091A42A00B732E0 /* CameraRecognition.framework in Embed Frameworks */,
+			);
+			name = "Embed Frameworks";
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXCopyFilesBuildPhase section */
 
 /* Begin PBXFileReference section */
 		9E5E228D208DCAB900B732E0 /* README.md */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = net.daringfireball.markdown; path = README.md; sourceTree = "<group>"; };
@@ -60,6 +91,13 @@
 		9E5E244020919CD000B732E0 /* libc++.tbd */ = {isa = PBXFileReference; lastKnownFileType = "sourcecode.text-based-dylib-definition"; name = "libc++.tbd"; path = "usr/lib/libc++.tbd"; sourceTree = SDKROOT; };
 		9E5E244220919CD700B732E0 /* libstdc++.6.0.9.tbd */ = {isa = PBXFileReference; lastKnownFileType = "sourcecode.text-based-dylib-definition"; name = "libstdc++.6.0.9.tbd"; path = "usr/lib/libstdc++.6.0.9.tbd"; sourceTree = SDKROOT; };
 		9E5E244420919CDE00B732E0 /* libz.tbd */ = {isa = PBXFileReference; lastKnownFileType = "sourcecode.text-based-dylib-definition"; name = libz.tbd; path = usr/lib/libz.tbd; sourceTree = SDKROOT; };
+		9E5E24502091A33D00B732E0 /* Example.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = Example.app; sourceTree = BUILT_PRODUCTS_DIR; };
+		9E5E24522091A33D00B732E0 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
+		9E5E24542091A33D00B732E0 /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
+		9E5E24572091A33D00B732E0 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
+		9E5E24592091A34100B732E0 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
+		9E5E245C2091A34100B732E0 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
+		9E5E245E2091A34100B732E0 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -78,6 +116,14 @@
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
+		9E5E244D2091A33D00B732E0 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				9E5E24632091A42A00B732E0 /* CameraRecognition.framework in Frameworks */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
@@ -87,6 +133,7 @@
 				9E5E23E320908C7D00B732E0 /* .swiftlint.yml */,
 				9E5E228D208DCAB900B732E0 /* README.md */,
 				9E5E242320919B1800B732E0 /* CameraRecognition */,
+				9E5E24512091A33D00B732E0 /* Example */,
 				9E404B63208D7F490025423D /* Products */,
 				9E5E228F208DCACE00B732E0 /* Frameworks */,
 			);
@@ -96,6 +143,7 @@
 			isa = PBXGroup;
 			children = (
 				9E5E242220919B1800B732E0 /* CameraRecognition.framework */,
+				9E5E24502091A33D00B732E0 /* Example.app */,
 			);
 			name = Products;
 			sourceTree = "<group>";
@@ -155,6 +203,19 @@
 			path = utils;
 			sourceTree = "<group>";
 		};
+		9E5E24512091A33D00B732E0 /* Example */ = {
+			isa = PBXGroup;
+			children = (
+				9E5E24522091A33D00B732E0 /* AppDelegate.swift */,
+				9E5E24542091A33D00B732E0 /* ViewController.swift */,
+				9E5E24562091A33D00B732E0 /* Main.storyboard */,
+				9E5E24592091A34100B732E0 /* Assets.xcassets */,
+				9E5E245B2091A34100B732E0 /* LaunchScreen.storyboard */,
+				9E5E245E2091A34100B732E0 /* Info.plist */,
+			);
+			path = Example;
+			sourceTree = "<group>";
+		};
 /* End PBXGroup section */
 
 /* Begin PBXHeadersBuildPhase section */
@@ -189,6 +250,25 @@
 			productReference = 9E5E242220919B1800B732E0 /* CameraRecognition.framework */;
 			productType = "com.apple.product-type.framework";
 		};
+		9E5E244F2091A33D00B732E0 /* Example */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 9E5E245F2091A34100B732E0 /* Build configuration list for PBXNativeTarget "Example" */;
+			buildPhases = (
+				9E5E244C2091A33D00B732E0 /* Sources */,
+				9E5E244D2091A33D00B732E0 /* Frameworks */,
+				9E5E244E2091A33D00B732E0 /* Resources */,
+				9E5E24672091A42B00B732E0 /* Embed Frameworks */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+				9E5E24662091A42A00B732E0 /* PBXTargetDependency */,
+			);
+			name = Example;
+			productName = Example;
+			productReference = 9E5E24502091A33D00B732E0 /* Example.app */;
+			productType = "com.apple.product-type.application";
+		};
 /* End PBXNativeTarget section */
 
 /* Begin PBXProject section */
@@ -205,6 +285,9 @@
 					9E5E242120919B1800B732E0 = {
 						CreatedOnToolsVersion = 9.3;
 						LastSwiftMigration = 0930;
+					};
+					9E5E244F2091A33D00B732E0 = {
+						CreatedOnToolsVersion = 9.3;
 					};
 				};
 			};
@@ -223,6 +306,7 @@
 			targets = (
 				9E5E242120919B1800B732E0 /* CameraRecognition */,
 				9E5E23D820908C4000B732E0 /* Swift-lint */,
+				9E5E244F2091A33D00B732E0 /* Example */,
 			);
 		};
 /* End PBXProject section */
@@ -234,6 +318,16 @@
 			files = (
 				9E5E243D20919B8F00B732E0 /* imagenet_comp_graph_label_strings.txt in Resources */,
 				9E5E243C20919B8E00B732E0 /* tensorflow_inception_graph.pb in Resources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		9E5E244E2091A33D00B732E0 /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				9E5E245D2091A34100B732E0 /* LaunchScreen.storyboard in Resources */,
+				9E5E245A2091A34100B732E0 /* Assets.xcassets in Resources */,
+				9E5E24582091A33D00B732E0 /* Main.storyboard in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -266,7 +360,43 @@
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
+		9E5E244C2091A33D00B732E0 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				9E5E24552091A33D00B732E0 /* ViewController.swift in Sources */,
+				9E5E24532091A33D00B732E0 /* AppDelegate.swift in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
 /* End PBXSourcesBuildPhase section */
+
+/* Begin PBXTargetDependency section */
+		9E5E24662091A42A00B732E0 /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			target = 9E5E242120919B1800B732E0 /* CameraRecognition */;
+			targetProxy = 9E5E24652091A42A00B732E0 /* PBXContainerItemProxy */;
+		};
+/* End PBXTargetDependency section */
+
+/* Begin PBXVariantGroup section */
+		9E5E24562091A33D00B732E0 /* Main.storyboard */ = {
+			isa = PBXVariantGroup;
+			children = (
+				9E5E24572091A33D00B732E0 /* Base */,
+			);
+			name = Main.storyboard;
+			sourceTree = "<group>";
+		};
+		9E5E245B2091A34100B732E0 /* LaunchScreen.storyboard */ = {
+			isa = PBXVariantGroup;
+			children = (
+				9E5E245C2091A34100B732E0 /* Base */,
+			);
+			name = LaunchScreen.storyboard;
+			sourceTree = "<group>";
+		};
+/* End PBXVariantGroup section */
 
 /* Begin XCBuildConfiguration section */
 		9E404B72208D7F4C0025423D /* Debug */ = {
@@ -410,7 +540,7 @@
 				CODE_SIGN_STYLE = Automatic;
 				CURRENT_PROJECT_VERSION = 1;
 				DEFINES_MODULE = YES;
-				DEVELOPMENT_TEAM = 4NNZ238874;
+				DEVELOPMENT_TEAM = 64QP8GDRNN;
 				DYLIB_COMPATIBILITY_VERSION = 1;
 				DYLIB_CURRENT_VERSION = 1;
 				DYLIB_INSTALL_NAME_BASE = "@rpath";
@@ -424,6 +554,7 @@
 				);
 				INFOPLIST_FILE = CameraRecognition/Info.plist;
 				INSTALL_PATH = "$(LOCAL_LIBRARY_DIR)/Frameworks";
+				IPHONEOS_DEPLOYMENT_TARGET = 9.0;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/Frameworks",
@@ -467,7 +598,7 @@
 				CODE_SIGN_STYLE = Automatic;
 				CURRENT_PROJECT_VERSION = 1;
 				DEFINES_MODULE = YES;
-				DEVELOPMENT_TEAM = 4NNZ238874;
+				DEVELOPMENT_TEAM = 64QP8GDRNN;
 				DYLIB_COMPATIBILITY_VERSION = 1;
 				DYLIB_CURRENT_VERSION = 1;
 				DYLIB_INSTALL_NAME_BASE = "@rpath";
@@ -481,6 +612,7 @@
 				);
 				INFOPLIST_FILE = CameraRecognition/Info.plist;
 				INSTALL_PATH = "$(LOCAL_LIBRARY_DIR)/Frameworks";
+				IPHONEOS_DEPLOYMENT_TARGET = 9.0;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/Frameworks",
@@ -514,6 +646,46 @@
 			};
 			name = Release;
 		};
+		9E5E24602091A34100B732E0 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				CODE_SIGN_STYLE = Automatic;
+				DEVELOPMENT_TEAM = 64QP8GDRNN;
+				INFOPLIST_FILE = Example/Info.plist;
+				IPHONEOS_DEPLOYMENT_TARGET = 9.0;
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+				);
+				PRODUCT_BUNDLE_IDENTIFIER = charlotte.Example;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_VERSION = 4.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+			};
+			name = Debug;
+		};
+		9E5E24612091A34100B732E0 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				CODE_SIGN_STYLE = Automatic;
+				DEVELOPMENT_TEAM = 64QP8GDRNN;
+				INFOPLIST_FILE = Example/Info.plist;
+				IPHONEOS_DEPLOYMENT_TARGET = 9.0;
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+				);
+				PRODUCT_BUNDLE_IDENTIFIER = charlotte.Example;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_VERSION = 4.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+			};
+			name = Release;
+		};
 /* End XCBuildConfiguration section */
 
 /* Begin XCConfigurationList section */
@@ -540,6 +712,15 @@
 			buildConfigurations = (
 				9E5E242C20919B1800B732E0 /* Debug */,
 				9E5E242D20919B1800B732E0 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		9E5E245F2091A34100B732E0 /* Build configuration list for PBXNativeTarget "Example" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				9E5E24602091A34100B732E0 /* Debug */,
+				9E5E24612091A34100B732E0 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
 			defaultConfigurationName = Release;
