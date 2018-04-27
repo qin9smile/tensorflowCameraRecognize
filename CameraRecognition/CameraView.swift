@@ -46,7 +46,7 @@ open class CameraView: UIView {
     }
   }
 
-  public var isScanAnimationEnable: Bool = true {
+  public var isScanAnimationEnable: Bool = false {
     didSet {
       if isScanAnimationEnable {
         _addScanAnimation()
@@ -64,6 +64,32 @@ open class CameraView: UIView {
       _addScanAnimation()
     }
   }
+  
+  public var screenRatio: [CGFloat] = [4, 3] {
+    didSet {
+      _updatePreviewRatio()
+    }
+  }
+  
+  public var previewLayerPosition: CGPoint? = nil {
+    didSet {
+      guard let _previewLayerPosition = previewLayerPosition, previewLayerPosition != oldValue else {
+        return
+      }
+      
+      videoPreviewLayer.position = _previewLayerPosition
+    }
+  }
+  
+  public var previewLayerAnchorPoint: CGPoint? = nil {
+    didSet {
+      guard let _previewLayerAnchorPoint = previewLayerAnchorPoint, previewLayerAnchorPoint != oldValue else {
+        return
+      }
+      
+      videoPreviewLayer.anchorPoint = _previewLayerAnchorPoint
+    }
+  }
 
   public var animationDuration:  CFTimeInterval = 3
   public var scanLineColor: UIColor = .blue {
@@ -71,6 +97,7 @@ open class CameraView: UIView {
       scanLineLayer?.backgroundColor = scanLineColor.cgColor
     }
   }
+  
   private let scanNetAnimation = CABasicAnimation()
 
   private var _scanAnimationKeyPath: String {
@@ -159,6 +186,8 @@ open class CameraView: UIView {
   public var delegate: CameraViewDelegate?
 
   // MARK: - Private Properties
+  
+  private var videoPreviewLayer: AVCaptureVideoPreviewLayer!
 
   /// 设备相机权限
   private var _permission: Bool = false
@@ -348,7 +377,7 @@ extension CameraView {
 
   /// 配置Camera Preview 及layout layer
   private func _configureLayout() {
-    let videoPreviewLayer = AVCaptureVideoPreviewLayer(session: _captureSession)
+    videoPreviewLayer = AVCaptureVideoPreviewLayer(session: _captureSession)
     videoPreviewLayer.videoGravity = .resizeAspectFill
     videoPreviewLayer.frame = CGRect(origin: .zero, size: frame.size)
     layer.addSublayer(videoPreviewLayer)
@@ -367,6 +396,9 @@ extension CameraView {
   ///
   /// - Parameter overlayPath: 遮罩路径
   private func _draw(_ overlayPath: UIBezierPath) {
+    let modifyRect = videoPreviewLayer.frame.insetBy(dx: 20, dy: 20)
+    let newPath = overlayPath.fit(into: modifyRect).moveCenter(to: videoPreviewLayer.position)
+    
     // 形状
     pathLayer.lineWidth = overlayLineWidth
     pathLayer.lineJoin = overlayLineJoin
@@ -375,12 +407,16 @@ extension CameraView {
     pathLayer.lineDashPattern = overlayLineDashPattern
     //路径颜色
     pathLayer.strokeColor = overlayStrokeColor.cgColor
-    pathLayer.path = overlayPath.cgPath
+    
+    pathLayer.path = newPath.cgPath
     pathLayer.fillColor = UIColor.clear.cgColor
+    
+    
+   
 
     // 猪的形状遮罩
     let _overlayPath = UIBezierPath(rect: CGRect(origin: .zero, size: frame.size))
-    _overlayPath.append(overlayPath)
+    _overlayPath.append(newPath)
     _overlayPath.usesEvenOddFillRule = true
 
     // 半透明背景遮罩
@@ -487,5 +523,28 @@ extension CameraView {
     maskScanLayer?.removeFromSuperlayer()
     scanLineLayer?.removeFromSuperlayer()
     scanLineLayer?.removeAnimation(forKey: "scan line")
+  }
+  
+  private func _updatePreviewRatio() {
+    guard screenRatio.count > 1 else {
+      return
+    }
+    
+    let widthRatio = screenRatio[0]
+    let heightRatio = screenRatio[1]
+    let width = frame.size.width
+    var height = frame.size.height
+    var size: CGSize = .zero
+    if scanAnimationDirection == .horizontal {
+      height = width / widthRatio * heightRatio
+      size = CGSize(width: width, height: height)
+    } else {
+      height = width / heightRatio * widthRatio
+      size = CGSize(width: width, height: height)
+    }
+    
+    videoPreviewLayer.frame = CGRect(origin: .zero, size: size)
+    videoPreviewLayer.position = CGPoint(x: frame.midX, y: frame.midY)
+    videoPreviewLayer.anchorPoint = CGPoint(x: 0.5, y: 0.5)
   }
 }
