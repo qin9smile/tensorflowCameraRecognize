@@ -31,6 +31,8 @@ public protocol CameraViewDelegate {
   func cameraView(_ cameraView: CameraView, predictionValue value: CGFloat, predictionImage image: UIImage)
   
   @objc optional func cameraView(_ cameraView: CameraView, predicationValues values: [AnyHashable: Any], predictionImage image: UIImage)
+  
+  @objc optional func cameraView(_ cameraView: CameraView, errorMessage: String, predictionImage image: UIImage?)
 }
 
 // MARK: - CameraView
@@ -261,6 +263,7 @@ extension CameraView: ImageRecognizerDelegate {
     let context = CIContext()
     guard let cgImage = context.createCGImage(ciImage, from: ciImage.extent)  else {
       debugPrint("Creates a Quartz 2D image from a region of a Core Image image object failed.")
+      self.delegate?.cameraView?(self, errorMessage: "Creates a Quartz 2D image from a region of a Core Image image object failed.", predictionImage: nil)
       return
     }
 
@@ -276,6 +279,8 @@ extension CameraView: ImageRecognizerDelegate {
       if value > self.predictionValue {
         /// 识别结果正确
         self.delegate?.cameraView(self, predictionValue: value, predictionImage: image)
+      } else {
+        self.delegate?.cameraView?(self, errorMessage: "no target", predictionImage: image)
       }
     }
   }
