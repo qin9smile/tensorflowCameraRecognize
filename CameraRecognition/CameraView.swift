@@ -177,6 +177,10 @@ open class CameraView: UIView {
       pathLayer.lineDashPattern = overlayLineDashPattern
     }
   }
+  
+  public var currentFactor: CGFloat {
+    return _currentFactor
+  }
 
   /// 置信度 -- 默认超过0.65认为识别正确
   public var predictionValue: CGFloat = 0.65
@@ -202,6 +206,8 @@ open class CameraView: UIView {
 
   /// 图像识别实例
   private let _imageRecognizer: ImageRecognizer = ImageRecognizer()
+  
+  private var _currentFactor: CGFloat = 0
 
   /// 相机遮罩的路径Layer
   private var pathLayer: CAShapeLayer = CAShapeLayer()
@@ -230,6 +236,7 @@ open class CameraView: UIView {
   private func _init() {
     _verifyPermission()
     _configureLayout()
+    _addGestures()
     _sessionQueue.async {
       self._configureSession()
       self._configureTensorFlowModel(modelName: MODEL_FILE_NAME, labelName: LABEL_FILE_NAME)
@@ -551,5 +558,69 @@ extension CameraView {
     videoPreviewLayer.frame = CGRect(origin: .zero, size: size)
     videoPreviewLayer.position = CGPoint(x: frame.midX, y: frame.midY)
     videoPreviewLayer.anchorPoint = CGPoint(x: 0.5, y: 0.5)
+  }
+  
+  private func _addGestures() {
+    let doubleTapGesture = UITapGestureRecognizer(target: self, action: #selector(_doubleTapGestureHandler(_:)))
+    doubleTapGesture.numberOfTapsRequired = 2
+    self.addGestureRecognizer(doubleTapGesture)
+    
+    let pinchGesture = UIPinchGestureRecognizer.init(target: self, action: #selector(_pinchGestureHandler(_:)))
+    self.addGestureRecognizer(pinchGesture)
+    
+    let singleTapGesture = UITapGestureRecognizer(target: self, action: #selector(_singleTapGestureHandler(_:)))
+    singleTapGesture.numberOfTapsRequired = 1
+    singleTapGesture.require(toFail: doubleTapGesture)
+    singleTapGesture.require(toFail: pinchGesture)
+    self.addGestureRecognizer(singleTapGesture)
+  }
+  
+  @objc private func _doubleTapGestureHandler(_ gesture: UITapGestureRecognizer) {
+    _currentFactor = _currentFactor >= 0.5 ? 0 : 1
+    _updateScaleFactor(scale: _currentFactor, withRate: 4)
+  }
+  
+  @objc private func _singleTapGestureHandler(_ gesture: UITapGestureRecognizer) {
+    debugPrint("single")
+  }
+  
+  @objc private func _pinchGestureHandler(_ gesture: UIPinchGestureRecognizer) {
+//    let newScaleFactor = gesture.scale * calculateZoom(_currentFactor)
+////    _currentFactor = gesture.scale
+////    _updateScaleFactor(scale: newScaleFactor, withRate: 2)
+//    
+//    switch gesture.state {
+//    case .began: fallthrough
+//    case .changed: _updateScaleFactor(scale: newScaleFactor, withRate: 2)
+//    case .ended:
+//      _currentFactor = newScaleFactor
+//      _updateScaleFactor(scale: _currentFactor, withRate: 2)
+//    default:
+//      break
+//    }
+  }
+  
+  private func _updateScaleFactor(scale factor: CGFloat, withRate rate: Float) {
+    guard let captureDevice = AVCaptureDevice.default(for: .video) else {
+      debugPrint("get instance of AVCaptureDevice failed")
+      return
+    }
+    
+    let _activeFactor = calculateZoom(factor)
+    
+    do {
+      try captureDevice.lockForConfiguration()
+      defer {
+        captureDevice.unlockForConfiguration()
+      }
+      captureDevice.ramp(toVideoZoomFactor: _activeFactor, withRate: rate)
+    } catch {
+      print("\(error.localizedDescription)")
+    }
+  }
+  
+  private func calculateZoom(_ factor: CGFloat) -> CGFloat {
+    let _factor = factor * (5.0 - 1.0)
+    return max(_factor, 1.0)
   }
 }
