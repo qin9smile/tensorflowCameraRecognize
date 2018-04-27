@@ -9,6 +9,9 @@
 import UIKit
 import CameraRecognition
 
+let ScreenWidth = UIScreen.main.bounds.width
+let ScreenHeight = UIScreen.main.bounds.height
+
 class ViewController: UIViewController {
   var cameraView: CameraView!
   var predicationViews: [UIView] = []
@@ -20,9 +23,11 @@ class ViewController: UIViewController {
     cameraView = CameraView(frame: view.frame)
     cameraView.delegate = self
     cameraView.predicationKey = predicationKey
-    //    cameraView.overlayPath = createBezierPath()
+    cameraView.screenRatio = [4, 3]
+    cameraView.backgroundColor = .black
+    cameraView.overlayPath = createBezierPath()
     cameraView.scanAnimationDirection = .horizontal
-    view.addSubview(cameraView)
+    view.addSubview(cameraView)    
   }
   
   private func _updatePredicationViews(predicationValues values: [AnyHashable : Any]) {
@@ -53,6 +58,72 @@ class ViewController: UIViewController {
     }
     
     predicationViews.removeAll()
+  }
+  
+  private func createBezierPath() -> UIBezierPath {
+    // create a new path
+    let path = UIBezierPath()
+    //segment 1: line
+    path.move(to: CGPoint(x: 50.0 / 375 * ScreenWidth, y: 524.0 / 667 * ScreenHeight))
+    //segment 2: line
+    path.addLine(to: CGPoint(x: 50.0 / 375 * ScreenWidth, y: 425.0 / 667 * ScreenHeight))
+    //segment 3: arc
+    path.addArc(withCenter: CGPoint(x: 66.0 / 375 * ScreenWidth, y: 425.0 / 667 * ScreenHeight),
+                radius: 16.0 / 375 * ScreenWidth, startAngle: CGFloat(Double.pi),
+                endAngle: CGFloat(3 * Double.pi / 2), clockwise: true)
+    //segment 4: line
+    path.addLine(to: CGPoint(x: 66.0 / 375 * ScreenWidth, y: 409.0 / 667 * ScreenHeight))
+    //segment 5: line
+    path.addLine(to: CGPoint(x: 99.0 / 375 * ScreenWidth, y: 409.0 / 667 * ScreenHeight))
+    
+    path.addArc(withCenter: CGPoint(x: 99.0 / 375 * ScreenWidth, y: 360.0 / 667 * ScreenHeight),
+                radius: 49.0 / 375 * ScreenWidth, startAngle: CGFloat(Double.pi / 2) ,
+                endAngle: CGFloat(0), clockwise: false)
+    path.addLine(to: CGPoint(x: 148.0 / 375 * ScreenWidth, y: 360.0 / 667 * ScreenHeight))
+    
+    path.addLine(to: CGPoint(x: 148.0 / 375 * ScreenWidth, y: 326.0 / 667 * ScreenHeight))
+    
+    path.addArc(withCenter: CGPoint(x: 99.0 / 375 * ScreenWidth, y: 326.0 / 667 * ScreenHeight),
+                radius: 49.0 / 375 * ScreenWidth, startAngle: CGFloat(0) ,
+                endAngle: CGFloat(3 * Double.pi / 2), clockwise: false)
+    
+    path.addLine(to: CGPoint(x: 66.0 / 375 * ScreenWidth, y: 277.0 / 667 * ScreenHeight))
+    
+    path.addArc(withCenter: CGPoint(x: 66.0 / 375 * ScreenWidth, y: 261.0 / 667 * ScreenHeight),
+                radius: 16.0 / 375 * ScreenWidth, startAngle: CGFloat(Double.pi / 2) ,
+                endAngle: CGFloat(Double.pi), clockwise: true)
+    
+    path.addLine(to: CGPoint(x: 50.0 / 375 * ScreenWidth, y: 161.0 / 667 * ScreenHeight))
+    
+    path.addArc(withCenter: CGPoint(x: 66.0 / 375 * ScreenWidth, y: 161.0 / 667 * ScreenHeight),
+                radius: 16.0 / 375 * ScreenWidth, startAngle: CGFloat(Double.pi) ,
+                endAngle: CGFloat(3 * Double.pi / 2), clockwise: true)
+    
+    path.addLine(to: CGPoint(x: 99.0 / 375 * ScreenWidth, y: 145.0 / 667 * ScreenHeight))
+    
+    path.addArc(withCenter: CGPoint(x: 99.0 / 375 * ScreenWidth, y: 96.0 / 667 * ScreenHeight),
+                radius: 49.0 / 375 * ScreenWidth, startAngle: CGFloat(Double.pi / 2) ,
+                endAngle: CGFloat(0), clockwise: false)
+    
+    path.addLine(to: CGPoint(x: 148.0 / 375 * ScreenWidth, y: 46.0 / 667 * ScreenHeight))
+    path.addArc(withCenter: CGPoint(x: 164.0 / 375 * ScreenWidth, y: 46),
+                radius: 16.0 / 375 * ScreenWidth, startAngle: CGFloat(Double.pi) ,
+                endAngle: CGFloat(3 * Double.pi / 2), clockwise: true)
+    path.addLine(to: CGPoint(x: 236.0 / 375 * ScreenWidth, y: 30))
+    path.addArc(withCenter: CGPoint(x: 236.0 / 375 * ScreenWidth, y: 119.0 / 667 * ScreenHeight),
+                radius: 89.0 / 375 * ScreenWidth, startAngle: CGFloat(3 * Double.pi / 2) ,
+                endAngle: CGFloat(0), clockwise: true)
+    path.addLine(to: CGPoint(x: 325.0 / 375 * ScreenWidth, y: 524))
+    
+    path.addArc(withCenter: CGPoint(x: 309.0 / 375 * ScreenWidth, y: 524.0 / 667 * ScreenHeight),
+                radius: 16.0 / 375 * ScreenWidth, startAngle: CGFloat(0) ,
+                endAngle: CGFloat(Double.pi / 2), clockwise: true)
+    path.addLine(to: CGPoint(x: 66.0 / 375 * ScreenWidth, y: 540.0 / 667 * ScreenHeight))
+    
+    path.addArc(withCenter: CGPoint(x: 66.0 / 375 * ScreenWidth, y: 524.0 / 667 * ScreenHeight),
+                radius: 16.0 / 375 * ScreenWidth, startAngle: CGFloat(Double.pi / 2) ,
+                endAngle: CGFloat(Double.pi), clockwise: true)
+    return path
   }
 }
 
